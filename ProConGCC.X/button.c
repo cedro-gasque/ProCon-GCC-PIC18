@@ -84,7 +84,7 @@ void checkbuttons(void)
     }
     else if (SettingData.modeData == 2)
     {
-        //ZL acts as digital+analog, L acts as analog half press
+        //L acts as digital+analog, ZL acts as analog half press
         gPollPacket[BUTTON_PORT_B]   |= !L_IN_PORT << 6;
         gPollPacket[TRIGGER_PORT_L]  |= (!L_IN_PORT) ? 0x80 : 0x00;
         
